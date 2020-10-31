@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<?import javafx.scene.image.Image?>
+<GridPane style="-fx-background-size:stretch; -fx-background-image: url('/Images/mario_map5.jfif')" fx:id="main_scene" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" stylesheets="@MyStyle.css"  fx:controller="View.CharactersView">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+       <ImageView fx:id="mario_right" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" onMouseClicked="#chooseCharacter">
+           <image>
+               <Image
+                       url="/Images/mario_right.png"
+                       backgroundLoading="true"
+               />
+           </image>
+       </ImageView>
+      <ImageView fx:id="luigi_right" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2" onMouseClicked="#chooseCharacter">
+          <image>
+              <Image
+                      url="/Images/luigi_right.png"
+                      backgroundLoading="true"
+              />
+          </image>
+      </ImageView>
+      <ImageView fx:id="princess_right" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3" onMouseClicked="#chooseCharacter" >
+          <image>
+              <Image
+                      url="/Images/princess_right.png"
+                      backgroundLoading="true"
+              />
+          </image>
+      </ImageView>
+      <ImageView fx:id="bowser_right" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1" onMouseClicked="#chooseCharacter" >
+          <image>
+              <Image
+                      url="/Images/bowser_right.png"
+                      backgroundLoading="true"
+              />
+          </image>
+      </ImageView>
+
+       <ImageView fx:id="turtle_right" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2" onMouseClicked="#chooseCharacter">
+           <image>
+               <Image
+                       url="/Images/turtle_right.png"
+                       backgroundLoading="true"
+               />
+           </image>
+       </ImageView>
+      <ImageView fx:id="toad_right" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="3" onMouseClicked="#chooseCharacter">
+          <image>
+              <Image
+                      url="/Images/toad_right.png"
+                      backgroundLoading="true"
+              />
+          </image>
+      </ImageView>
+      <Label text="CHOOSE" textAlignment="JUSTIFY" GridPane.columnIndex="0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="37.0" />
+         </padding>
+      </Label>
+       <Label text="YOUR" textAlignment="JUSTIFY" GridPane.columnIndex="1">
+           <opaqueInsets>
+               <Insets />
+           </opaqueInsets>
+           <padding>
+               <Insets left="37.0" />
+           </padding>
+       </Label>
+       <Label text="CHARACTER!" textAlignment="JUSTIFY" GridPane.columnIndex="2">
+           <opaqueInsets>
+               <Insets />
+           </opaqueInsets>
+           <padding>
+               <Insets left="37.0" />
+           </padding>
+       </Label>
+   </children>
+</GridPane>

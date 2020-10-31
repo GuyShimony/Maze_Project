@@ -1,0 +1,93 @@
+.root{
+    -fx-background-color: #a6b5c9;
+}
+
+Button {
+    -fx-text-fill: white;
+    -fx-background-color: #a6b5c9;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-weight: BOLD;
+    -fx-font-family: "Comic Sans MS";
+
+}
+
+.Button:hover{
+    -fx-background-color: -fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+    -fx-background-radius: 3px, 3px, 2px, 1px;
+    -fx-padding: 0.333333em 0.666667em 0.333333em 0.666667em; /* 4 8 4 8 */
+    -fx-text-fill: -fx-text-base-color;
+    -fx-alignment: CENTER;
+    -fx-content-display: LEFT;
+}
+
+Label{
+    -fx-font-size: 25;
+    -fx-font-family: "Comic Sans MS";
+    -fx-text-fill: white;
+}
+
+.text {
+    -fx-text-fill: white;
+    -fx-font-smoothing-type: lcd;
+}
+
+
+
+.combo-box-base{
+    -fx-background-color: black;
+    -fx-padding: 2 2;
+}
+
+.combo-box-base:editable{
+    -fx-background-color: #FF0;
+}
+
+.combo-box-base:editable > .text-field {
+    -fx-border-image-source: null;
+    -fx-background-color: transparent;
+    -fx-padding: 1 0;
+}
+
+.combo-box-base > .arrow-button {
+    -fx-background-color: white;
+    -fx-padding: 0 4;
+}
+
+.combo-box-base > .arrow-button > .arrow {
+    -fx-background-color: black;
+    -fx-background-insets: 0 0 0 0;
+    -fx-padding: 2 4;
+    -fx-shape: "M 0 0 H 7 L 3.5 4 z";
+}
+
+.combo-box-popup > .list-view {
+    -fx-border-style: solid;
+    -fx-border-width: 1;
+    -fx-border-color: black;
+    -fx-background-color: white;
+    -fx-background-insets: 0, 1;
+}
+
+.combo-box-base .text{
+    -fx-fill: white;
+}
+.combo-box .text-field:focused {
+    -fx-prompt-text-fill: transparent ;
+}
+
+.combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell {
+    -fx-padding: 1 10;
+    -fx-background: black;
+}
+.combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected {
+    -fx-background: green;
+    -fx-background-color: orange !important;
+}
+.combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:hover,
+.combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected:hover {
+    -fx-background-color: silver !important;
+}
+.combo-box-popup > .list-view > .placeholder > .label {
+    -fx-text-fill: blue;
+}

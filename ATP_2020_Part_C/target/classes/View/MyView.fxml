@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import View.MazeDisplayer?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<BorderPane fx:id="borderpane_main_scene" onMouseClicked="#mouseClicked" minHeight="200" prefHeight="649.0" prefWidth="862.0" stylesheets="@MyStyle.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.MyViewController"
+>
+    <fx:define>
+        <String fx:id="PlayerMoveSound" fx:value="./resources/Music/PlayerMove.mp3"/>
+    </fx:define>
+    <top>
+        <VBox BorderPane.alignment="CENTER">
+            <children>
+                <MenuBar fx:id="menuBar">
+                    <menus>
+                        <Menu text="File">
+                            <items>
+                                <MenuItem onAction="#handleMenuNew" text="New" />
+                                <MenuItem onAction="#handleMenuSave" text="Save" />
+                                <MenuItem onAction="#handleMenuLoad" text="Load" />
+                            </items>
+                        </Menu>
+                        <Menu text="Options">
+                            <items>
+                                <MenuItem text="Properties" onAction="#handleMenuProperties"/>
+                            </items>
+                        </Menu>
+                        <Menu text="Help">
+                            <items>
+                                <MenuItem text="Game Rules" onAction="#handleMenuGameRules"/>
+                                <MenuItem text="Symbols" onAction="#handleMenuSymbols" />
+                            </items>
+                        </Menu>
+                        <Menu text="About">
+                            <items>
+                                <MenuItem text="About the programmers" onAction= "#handleMenuAboutTheProgrammers" />
+                                <MenuItem text="About the algorithms used"  onAction= "#handleMenuAlgorithmUsed"  />
+                            </items>
+                        </Menu>
+                        <Menu text="Exit">
+                            <items>
+                                <MenuItem text="Exit the program" onAction="#handleMenuExit"/>
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+            </children>
+        </VBox>
+    </top>
+    <center>
+        <Pane fx:id="game_pane" prefHeight="608.0" prefWidth="896.0" stylesheets="@MyStyle.css" BorderPane.alignment="CENTER">
+            <children>
+                <Label fx:id="instruction" text="PRESS NEW AND CREATE A NEW MAZE" stylesheets="@Label.css"
+                       alignment="CENTER_RIGHT"/>
+                <MazeDisplayer fx:id="mazeDisplayer" onKeyPressed="#keyPressed" height="600"
+                               imageFileNamePlayer="./resources/Images/mario_right.png"
+                               imageFileNameHint="./resources/Images/mario_mushroom.png"
+                               imageFileNameWall="./resources/Images/wall1.png"
+                               imageFileNameGoal="./resources/Images/flag.png"
+                               imageArrowUp = "./resources/Images/up_arrow.png"
+                               imageArrowUpRight = "./resources/Images/diagonal_right_up_arrow.png"
+                               imageArrowRight = "./resources/Images/right_arrow.png"
+                               imageArrowDown = "./resources/Images/down_arrow.png"
+                               imageArrowDownLeft = "./resources/Images/diagonal_left_down_arrow.png"
+                               imageArrowLeft = "./resources/Images/left_arrow.png"
+                               imageArrowUpLeft = "./resources/Images/diagonal_left_up_arrow.png"
+                               imageArrowDownRight = "./resources/Images/diagonal_right_down_arrow.png"
+                               imageBackround = "./resources/Images/mario_sky.png"/>
+            </children>
+
+        </Pane>
+    </center>
+
+</BorderPane>

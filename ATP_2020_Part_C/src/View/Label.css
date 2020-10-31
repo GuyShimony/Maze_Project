@@ -1,0 +1,12 @@
+.label {
+    -fx-font-size: 35px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+    -fx-background-color: cornflowerblue;
+    -fx-alignment:baseline-left;
+    -fx-padding: 100,100,100,100;
+}
+.label:hover {
+    -fx-background-color: blue;;
+}
